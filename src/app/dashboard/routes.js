@@ -4,21 +4,33 @@ export default [
   {
     path: '/',
     name: 'index',
+    meta: {
+      needAuth: true
+    },
     component: components.DbView
   },
   {
     path: '/dashboard',
     name: 'dashboard',
+    meta: {
+      needAuth: true
+    },
     component: components.DbView
   },
   {
     path: '/switch',
     name: 'switch',
+    meta: {
+      needAuth: true
+    },
     component: components.SwitchView
   },
   {
     path: '/camera',
     name: 'camera',
+    meta: {
+      needAuth: true
+    },
     component: components.CameraView
   },
   {
@@ -26,14 +38,27 @@ export default [
     name: 'control',
     component: components.ControlView
   },
+  // {
+  //   path: '/tl',
+  //   name: 'timeline',
+  //   component: components.TimelineView
+  // },
+  // {
+  //   path: '/demo',
+  //   name: 'demo',
+  //   component: components.DemoView
+  // },
   {
-    path: '/tl',
-    name: 'timeline',
-    component: components.TimelineView
+    path: '/login',
+    component: components.Login,
+    meta: {
+      needAuth: false
+    },
+    name: 'login'
   },
   {
-    path: '/demo',
-    name: 'demo',
-    component: components.DemoView
+    path: '/header',
+    component: components.Header,
+    name: 'header'
   }
 ]

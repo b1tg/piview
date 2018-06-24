@@ -14,8 +14,8 @@ module.exports = {
       // proxy all requests starting with /api to jsonplaceholder
       '/api': {
         // target: 'http://127.0.0.1:1234/api',
-        // target: 'http://192.168.2.4:1234/api',
-        target: 'http://47.95.237.72:1234/api',
+        target: 'http://192.168.2.4:1234/api',
+        // target: 'http://47.95.237.72:1234/api',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''  // 若target中没有/api、这里又为空，则404；

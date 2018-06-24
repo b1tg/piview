@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="columns app-container">
-      <div class="column sidebar is-3">
-        <span class="brand"><img src="../assets/logo.png">Piview</span>
+      <div class="column sidebar is-3" v-show="showNav">
+        <span class="brand"><img src="../assets/logo.png">智能家居设计</span>
         <navi></navi>
       </div>
       <div class="column">
@@ -18,7 +18,15 @@ export default {
   name: 'App',
   components: {
     Navi
-  }
+  },
+  created () {
+    this.showNav = this.$route.path !== '/login'
+  },
+  computed:{
+    showNav () {
+      return this.$route.path !== '/login'
+    }
+  },
 }
 </script>
 
@@ -51,7 +59,7 @@ export default {
     margin-bottom: 0;
   }
 .sidebar {
-  background-color: aqua;
+  background-color:black;
     .brand {
       font-size: 24px;
       color: #ffffff;
